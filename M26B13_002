@@ -1,0 +1,88 @@
+/*
+    STUDENT GRADING SYSTEM
+
+    Description:
+    This program allows a lecturer to enter student names
+    and marks, then calculates the corresponding grades.
+
+    How to run:
+    1. Open a terminal.
+    2. Navigate to the folder containing this file.
+    3. Run: node M26B13_002.js
+
+    How to use:
+    Follow the instructions displayed in the terminal.
+*/
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+// Function 1: Calculate the student's grade
+function calculateGrade(mark) {
+    if (mark >= 80) {
+        return "A";
+    } else if (mark >= 70) {
+        return "B";
+    } else if (mark >= 60) {
+        return "C";
+    } else if (mark >= 50) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+// Function 2: Display the student's result
+function displayResult(name, mark, grade) {
+    console.log("\n-----------------------------");
+    console.log("Student Name: " + name);
+    console.log("Mark: " + mark);
+    console.log("Grade: " + grade);
+    console.log("-----------------------------");
+}
+
+// Function 3: Display the final message
+function displaySummary() {
+    console.log("\nStudent grading process completed.");
+    console.log("Thank you for using the Student Grading System.");
+}
+
+// Main program
+console.log("=================================");
+console.log("       STUDENT GRADING SYSTEM");
+console.log("=================================");
+
+rl.question("Enter the number of students: ", function(numberOfStudents) {
+
+    numberOfStudents = parseInt(numberOfStudents);
+
+    // Process each student
+    function enterStudent(index) {
+
+        if (index > numberOfStudents) {
+            displaySummary();
+            rl.close();
+            return;
+        }
+
+        rl.question(`\nEnter the name of student ${index}: `, function(name) {
+
+            rl.question(`Enter the mark for ${name}: `, function(mark) {
+
+                mark = parseFloat(mark);
+
+                const grade = calculateGrade(mark);
+
+                displayResult(name, mark, grade);
+
+                enterStudent(index + 1);
+            });
+        });
+    }
+
+    enterStudent(1);
+});
