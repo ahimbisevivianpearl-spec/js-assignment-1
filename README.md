@@ -106,3 +106,6 @@ Grade: F
 
 Student grading process completed.
 Thank you for using the Student Grading System.
+## Reflection
+
+This project helped me understand how JavaScript can be used to solve a simple practical problem. I developed a Student Grading System that allows a lecturer to enter student names and marks and receive the appropriate grades. The main problem solved was reducing the manual effort needed to determine grades for several students. I used functions to organize the program, conditional statements to determine grades, and repeated input processing to handle multiple students. I also used Node.js and the readline module to allow interaction through the console. Testing the program with different marks helped me understand how conditions affect the final output. Through this assignment, I improved my understanding of JavaScript functions, conditions, user input, and program organization.
