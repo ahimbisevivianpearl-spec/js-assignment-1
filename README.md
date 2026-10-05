@@ -71,3 +71,38 @@ Collects student information and processes each student.
 
 ```bash
 node M26B13_002.js
+=================================
+       STUDENT GRADING SYSTEM
+=================================
+
+Enter the number of students: 3
+
+Enter the name of student 1: Claus
+Enter the mark for Claus: 90
+
+-----------------------------
+Student Name: Claus
+Mark: 90
+Grade: A
+-----------------------------
+
+Enter the name of student 2: Alvin
+Enter the mark for Alvin: 64
+
+-----------------------------
+Student Name: Alvin
+Mark: 64
+Grade: C
+-----------------------------
+
+Enter the name of student 3: Joan
+Enter the mark for Joan: 29
+
+-----------------------------
+Student Name: Joan
+Mark: 29
+Grade: F
+-----------------------------
+
+Student grading process completed.
+Thank you for using the Student Grading System.
