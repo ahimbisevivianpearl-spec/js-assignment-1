@@ -16,6 +16,7 @@
 
 const readline = require("readline");
 
+// Create an interface to receive input from the user
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
